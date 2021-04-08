@@ -7,12 +7,13 @@ namespace OOP.HW3
    public class Program
     {
 
-        static int Min { get; set; }
-        static int Max { get; set; }
+        public static int Min { get; set; }
+        public static int Max { get; set; }
 
-        static void SetMin()
+        public static int tries = 0;
+        public static void SetMin()
         {
-            while (true)
+            while (tries++ < 100)
             {
                 Console.WriteLine("Введите нижнюю границу диапазона");
 
@@ -31,9 +32,9 @@ namespace OOP.HW3
 
         }
 
-        static void SetMax()
+        public static void SetMax()
         {
-            while (true)
+            while (tries++ < 100)
             {
                 Console.WriteLine("Введите верхнюю границу диапазона");
 
@@ -57,7 +58,7 @@ namespace OOP.HW3
             SetMin();
             SetMax();
 
-            while (true)
+            while (tries++ < 100)
             {
                 if (Max - Min <= 10)
                 {
@@ -87,11 +88,11 @@ namespace OOP.HW3
             {
                 Console.WriteLine("Чисел, делящихся на 3 и не делящихся на 5 в диапазоне нет");
             }
-
-            Console.WriteLine(string.Join(" ", arr));
-            Console.WriteLine("Cумма чисел, которые делятся на 3 и не делятся на 5 = " + sum);
-            Console.ReadLine();
-
+            else
+            {
+                Console.WriteLine(string.Join(" ", arr));
+                Console.WriteLine("Cумма чисел, которые делятся на 3 и не делятся на 5 = " + sum);
+            }     
 
         }
 
