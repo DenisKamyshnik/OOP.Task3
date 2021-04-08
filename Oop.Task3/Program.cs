@@ -10,9 +10,7 @@ namespace OOP.HW3
         public static int Min { get; set; }
         public static int Max { get; set; }
 
-        static int tries = 0;
-
-
+        public static int tries = 0;
         public static void SetMin()
         {
             while (tries++ < 100)
